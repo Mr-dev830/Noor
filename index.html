@@ -305,9 +305,12 @@ I knew you'd say yes… you just made me the happiest person alive ❤️
 
 /* runaway button */
 
+const music = document.getElementById("music")
 const noBtn=document.getElementById("noBtn")
-
 noBtn.onclick=()=>{
+  document.body.addEventListener("click", () => {
+music.play()
+},{ once:true })
 
 let x=Math.random()*window.innerWidth
 let y=Math.random()*window.innerHeight
@@ -321,6 +324,8 @@ noBtn.style.top=y+"px"
 /* yes click */
 
 document.getElementById("yesBtn").onclick=()=>{
+
+music.play()
 
 document.getElementById("main").style.display="none"
 
